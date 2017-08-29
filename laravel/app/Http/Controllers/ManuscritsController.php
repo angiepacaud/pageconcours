@@ -5,8 +5,10 @@ namespace App\Http\Controllers;
 use \App\Manuscrits;
 use \App\Services\Manuscrits as ManuscritsService;
 use \App\Http\Requests\ManuscritsRequest;
-use \App\Http\FileGestionInterface;
+//use \App\Http\FileGestionInterface;
 use \App\Gestion\FileGestion;
+//use \App\Http\DescriptionFileInterface;
+use \App\Gestion\DescriptionFileGestion;
 
 
 class ManuscritsController extends Controller
@@ -21,7 +23,7 @@ class ManuscritsController extends Controller
 		return view('manuscrits', ['genres'=> $genres]);
 	}
 
-	public function postForm(ManuscritsRequest $request, FileGestion $Filegestion)
+	public function postForm(ManuscritsRequest $request, FileGestion $Filegestion, DescriptionFileGestion $Descriptionfile)
 
 	{
 		
@@ -45,15 +47,14 @@ class ManuscritsController extends Controller
 		$manuscrits->comments = $request ->input('comments');
 		
 		$info_fichier = $Filegestion->save($request->file('file'));
+		$info_fichierdescription = $Descriptionfile->save($request->file('descriptionfile'));
 		if ($info_fichier == false) {
-
 				return view('error/erreur_extension');
-				//return redirect('manuscrits')
-							//->with('error','Désolé mais votre manuscrits ne peut pas être envoyée !');
 		}
 
 
 		$manuscrits->file = $info_fichier->getFilename();
+		$manuscrits->descriptionfile = $info_fichierdescription->getFilename();
 	
 
 	/*	$this->validate($request, [

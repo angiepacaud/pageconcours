@@ -151,8 +151,7 @@
                     
         			<div class="com">
         				<p class="comments">{!! Form::label('comments', 'Commentaires') !!}</p>
-        				<p>Notez ici toute information pertinente concernant votre
-        					manuscrit.</p>
+        				<p>Notez ici toute information pertinente concernant votre manuscrit.</p>
         				{!! Form::textarea('comments') !!} <br>
         			</div>
         			
@@ -186,7 +185,10 @@
 					dépasse pas une page.</p>
 				{!! Form::textarea('resume') !!} <br>
 			</div>
-
+			
+		    <div class="file">
+				{!! Form::file('descriptionfile', array('class' => '')) !!} {!! $errors->first('manuscrits', '<small class="help-block">:message</small>') !!}
+			</div>
 			{!! Form::submit('Envoyer', ['class' => 'btn btn-info pull-right']) !!}
 			{!! Form::close() !!}
 		</div>

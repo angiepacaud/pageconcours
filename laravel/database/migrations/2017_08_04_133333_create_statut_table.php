@@ -14,16 +14,13 @@ class CreateStatutTable extends Migration
     public function up()
     {
         Schema::create('statut', function(Blueprint $table) {
-        $table->increments('id_statut')->unsigned();
-        $table->string('Traitement', 255);
-      /*  $table->string('Lu', 255);
-        $table->string('En cours', 255);
-        $table->string('A lire', 255); */
+            $table->increments('id_statut')->unsigned();
+            $table->string('Traitement', 255);
         });
 
         Schema::table('manuscrits', function($table) {
 
-       $table->foreign('id_statut')->references('id_statut')->on('statut');
+            $table->foreign('id_statut')->references('id_statut')->on('statut');
 
        });
     }

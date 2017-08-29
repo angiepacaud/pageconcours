@@ -25,7 +25,7 @@ class CreateNotesTable extends Migration
                         // ->onUpdate('restrict');
 
 
-            $table->foreign('id_manuscrits')->references('id')->on('manuscrits');
+        $table->foreign('id_manuscrits')->references('id')->on('manuscrits');
                       //  ->onDelete('restrict')
                       //  ->onUpdate('restrict');
 
@@ -48,8 +48,8 @@ class CreateNotesTable extends Migration
         Schema::table('manuscrits', function(Blueprint $table) {
             //$table->dropForeign('manuscrits_id_notes_foreign');
 
-        $table->dropForeign('notes_id_user_foreign');
-        $table->dropForeign('notes_id_manuscrits_foreign');
+//         $table->dropForeign('notes_id_user_foreign');
+//         $table->dropForeign('notes_id_manuscrits_foreign');
         
         });
 

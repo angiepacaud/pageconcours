@@ -1,5 +1,4 @@
 <?php
-
 use Illuminate\Database\Seeder;
 
 class ManuscritsTableSeeder extends Seeder {

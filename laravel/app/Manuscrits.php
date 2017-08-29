@@ -10,9 +10,9 @@ class Manuscrits extends Model
     protected $table ='manuscrits';
 
     public $timestamps = false;
-public function getId(){
-    return $this->id;
-}
+    public function getId(){
+        return $this->id;
+    }
     public function genre () {
     	$this->belongsTo(Genre::class);
     	

@@ -7,40 +7,6 @@ class FileGestion implements FileGestionInterface
 
     public function save($file)
 	{
-		//print_r(filesize($file));
-		//print_r(getimagesize($file));	
-		//die();
-		
-		
-	/*	if (filesize($file) > 8388608)
-			{
-				return view('la taille nest pas correct');
-			}
-
-		if (fileextension($file) != doc,docx,rtf,pdf) 
-		{
-			return view('Le format nest pas correct');
-		}  
-      // Display File Name
-       echo 'File Name: '.$file->getClientOriginalName() ;
-       echo '<br>';
-   
-      // Display File Extension
-       echo 'File Extension: '.$file->getClientOriginalExtension() ;
-       echo '<br>';
-   
-      // Display File Real Path
-       echo 'File Real Path: '.$file->getRealPath() ;
-      echo '<br>';
-   
-      // Display File Size
-       echo 'File Size: '.$file->getSize() ;
-       echo '<br>';
-   		// Display File Mime Type
-       echo 'File Mime Type: '.$file->getMimeType() ; 
-       echo '<br>';  */
-   
-		
 		if($file->isValid())
 		
 		{

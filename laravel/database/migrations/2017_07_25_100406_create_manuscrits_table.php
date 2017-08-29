@@ -14,29 +14,20 @@ class CreateManuscritsTable extends Migration
     public function up()
     {
   
-    Schema::create('manuscrits', function(Blueprint $table) {
-        $table->increments('id');
-        $table->string('firstname', 255);
-        $table->string('name', 255);
-        $table->string('email', 255);
-        $table->string('title', 255);
-        $table->integer('id_genre')->unsigned();
-         // $table->foreign('id_genre')
-               // ->references('id_genre')
-               // ->on('genres')
-               // ->onDelete('restrict')
-       //->onUpdate('restrict');
-        $table->text('resume');
-        $table->text('comments')->nullable();
-        $table->string('file', 255);
-        $table->integer('id_statut')->unsigned()->nullable();
-    });
-
-//     Schema::table('manuscrits', function($table) {
-
-//       $table->foreign('id_genre')->references('id_genre')->on('genres');
-
-  //     }); 
+        Schema::create('manuscrits', function(Blueprint $table) {
+            $table->increments('id');
+            $table->string('firstname', 255);
+            $table->string('name', 255);
+            $table->string('email', 255);
+            $table->string('title', 255);
+            $table->integer('id_genre')->unsigned();
+            $table->text('resume');
+            $table->text('comments')->nullable();
+            $table->string('file', 255);
+            $table->string('descriptionfile', 255);
+            $table->integer('id_statut')->unsigned()->nullable();
+        });
+       
     }
     
 
