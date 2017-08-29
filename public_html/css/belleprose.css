@@ -1,0 +1,12 @@
+.echeancierTr {
+	border-bottom: solid 1px;
+}
+
+h1.coordonnees{
+	text-align:center;
+	color:#094782;
+	display:block;
+}
+select {
+	-webkit-appearance: menulist;
+}
