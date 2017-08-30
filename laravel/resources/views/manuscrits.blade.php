@@ -1,6 +1,5 @@
 @extends('template') @section('contenu')
 
-
 <section id="contact" class="contact gray-bg">
 	<div class="container">
 		<div class="row border-bottom  text-center" data-os-animation="">
@@ -119,7 +118,7 @@
 		<h1 class="coordonnees">INSCRIPTION</h1>
 		<p style="text-align:center;font-weight:bold">Merci de télécharger la fiche descriptive du manuscrit ci bas ; de la remplir et de l’envoyer via le formulaire dédié avec votre manuscrit</p> 
 		<div class="col-md-6 col-sm-6">
-		  <a name="error"></a>
+		  <a id="error"></a>
 				@if(session()->has('error'))
 				<div class="alert alert-danger">{!! session('error') !!}</div>
 				@endif 
@@ -182,6 +181,12 @@
 	*/
 	?>
 </section>
-
+@if ($errors->any())
+    <script type="text/javascript">
+    $( document ).ready(function() {
+        $(document).scrollTop( $("#error").offset().top );  
+    });
+    </script>
+@endif
 
 @endsection

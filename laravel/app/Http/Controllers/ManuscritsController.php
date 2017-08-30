@@ -15,6 +15,7 @@ class ManuscritsController extends Controller
 {
 /**
  * php artisan migrate
+ * php composer.phar dump-autoload
  * php artisan db:seed --class=DatabaseSeeder
  */
     public function index()
