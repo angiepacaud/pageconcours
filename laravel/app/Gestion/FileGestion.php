@@ -15,7 +15,7 @@ class FileGestion implements FileGestionInterface
 			if (filesize($file) > 8388608)
 			{
 				//return false;
-				die('poids');
+				return false;
 			}
 			
 			

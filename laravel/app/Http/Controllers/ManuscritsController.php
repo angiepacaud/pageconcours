@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use \App\Manuscrits;
-use \App\Services\Manuscrits as ManuscritsService;
+//use \App\Services\Manuscrits as ManuscritsService;
 use \App\Http\Requests\ManuscritsRequest;
 //use \App\Http\FileGestionInterface;
 use \App\Gestion\FileGestion;
@@ -14,7 +14,7 @@ use \App\Gestion\DescriptionFileGestion;
 class ManuscritsController extends Controller
 {
 
-    public function index(ManuscritsService $service)
+    public function index()
 	{
 		
 		//$listgenre = Items::all(['id_genre', 'genre_name']);
@@ -36,7 +36,6 @@ class ManuscritsController extends Controller
 		// {
 		// 	return view ('mauvaise extension');
 		// } 
-		
 		$manuscrits = new Manuscrits;
 		$manuscrits->firstname = $request->input('firstname');
 		$manuscrits->name = $request->input('name');
@@ -45,10 +44,9 @@ class ManuscritsController extends Controller
 		$manuscrits->id_genre = $request->input('genre');
 		$manuscrits->resume = $request->input('resume');
 		$manuscrits->comments = $request ->input('comments');
-		
 		$info_fichier = $Filegestion->save($request->file('file'));
 		$info_fichierdescription = $Descriptionfile->save($request->file('descriptionfile'));
-		if ($info_fichier == false) {
+		if ($info_fichier == false || $info_fichierdescription == false) {
 				return view('error/erreur_extension');
 		}
 

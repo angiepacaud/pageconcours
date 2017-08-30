@@ -33,6 +33,7 @@ class ManuscritsRequest extends FormRequest
             'resume' => 'required',
             'comments' => '',
             'file'=> 'required',
+            'descriptionfile'=> 'required',
 
         ];
     }

@@ -14,6 +14,7 @@
 
 Route::get('/', 'ManuscritsController@index');
 Route::post('/', ['uses' => 'ManuscritsController@postForm', 'as' => 'storeManuscrits']);
+//Route::post('/', ['uses' => 'ManuscritsController@index', 'as' => 'storeManuscrits']);
 
  Route::get('erreur_extension', function () {
  	return view('erreur_extension');

@@ -120,7 +120,7 @@ return [
         'name'                  => 'nom',
         'username'              => 'nom d\'utilisateur',
         'email'                 => 'adresse e-mail',
-        'first_name'            => 'prénom',
+        'firstname'            => 'prénom',
         'last_name'             => 'nom',
         'password'              => 'mot de passe',
         'password_confirmation' => 'confirmation du mot de passe',
@@ -146,6 +146,8 @@ return [
         'time'                  => 'heure',
         'available'             => 'disponible',
         'size'                  => 'taille',
+        'file'                  => 'Fichier obligatoire',
+        'descriptionfile'       => 'Fichier obligatoire',
     ],
 
 ];
