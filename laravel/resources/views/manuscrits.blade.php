@@ -15,7 +15,8 @@
 					<p class="text-left">
 						• Vous devez être <strong>citoyens ou résidents permanents canadiens </strong>et devez être âgés de <strong>plus de 18 ans </strong>au moment du début du concours.<br />
 						• Il doit s’agir d’une œuvre originale complète, ni publiée ni en cours de publication d’un minimum de <strong>350 000 à 600 000 signes en langue française.</strong><br />
-						• Les illustrations et les recueils de nouvelles ne sont pas admissibles au concours <br /> • Le texte doit être envoyé au format <strong>word ou pdf </strong>et le formulaire dument rempli.<br /><br /> 
+						• Les illustrations et les recueils de nouvelles ne sont pas admissibles au concours <br /> 
+						• Le texte doit être envoyé au format <strong>word ou pdf </strong>avec le formulaire word dument rempli.<br /><br /> 
 						• <strong style="font-size:18px"><a target="_blank"href="/reglement.pdf">Règlement complet disponible ici </a>.</strong><br />
 					</p>
 				</div>
@@ -115,15 +116,15 @@
 			</div>
 		</div>
 		
-		<h1 class="coordonnees">INFORMATIONS SUR VOTRE MANUSCRIT</h1>
-		
+		<h1 class="coordonnees">INSCRIPTION</h1>
+		<p style="text-align:center;font-weight:bold">Merci de télécharger la fiche descriptive du manuscrit ci bas ; de la remplir et de l’envoyer via le formulaire dédié avec votre manuscrit</p> 
 		<div class="col-md-6 col-sm-6">
 		  <a name="error"></a>
 				@if(session()->has('error'))
 				<div class="alert alert-danger">{!! session('error') !!}</div>
 				@endif 
 				{!! Form::open(['route' => 'storeManuscrits', 'files' => true]) !!}
-
+                <h3 class="coordonnees">VOS COORDONN&Eacute;ES</h3>
 				<div class="form-group {!! $errors->has('manuscrits') ? 'has-error' : '' !!}">
 					<!--	{!! Form::email('email', null, array('class' => 'form-control', 'placeholder' => 'Entrez votre email')) !!} -->
 
@@ -135,30 +136,29 @@
 					<p class="for">{!! Form::label('email', 'Mail') !!} {!! Form::email('email') !!} {!! $errors->first('email', '<small class="help-block">:message</small>') !!}</p>
         			
         		    <div class="file">
-        				<p>
-        					Votre manuscrit<small> (formats doc, docx, rtf, pdf / taille du fichier limité à 8Mo)</small>
+        				<p class="for">
+        					{!! Form::label('file', 'Votre manuscrit') !!}<small> (formats doc, docx, rtf, pdf / taille du fichier limité à 8Mo)</small>
         				</p>
         				{!! Form::file('file', array('class' => '')) !!}
         				{!! $errors->first('file', '<small class="help-block">:message</small>') !!}
         			</div>
         			
         			<div class="file">
-        			    Pour valider votre inscription merci de joindre la fiche descriptive du manuscrit et votre manuscrit juste ici : <a href="/description_manuscrit.docx">Fiche descriptive</a>
+        			    {!! Form::label('descriptionfile', 'Fiche descriptive') !!}
+        			    Pour valider votre inscription merci de joindre la fiche descriptive du manuscrit et votre manuscrit juste ici : <a href="/description_manuscrit.docx">FICHE DESCRIPTIVE A TELECHARGER </a>
         				{!! Form::file('descriptionfile', array('class' => '')) !!} 
         				{!! $errors->first('descriptionfile', '<small class="help-block">:message</small>') !!}
         			</div>
 				</div>
         </div>
         <div class="col-md-6 col-sm-6">
+            <h3 class="coordonnees">INFORMATIONS SUR VOTRE MANUSCRIT</h3>
 			<div>
 				<p class="for">{!! Form::label('Title', 'Titre') !!} {!! Form::text('title') !!} {!! $errors->first('title', '<small class="help-block">:message</small>') !!}</p>
-				
-				<p class="for">{!! Form::label('genre', 'Genre') !!} {!! Form:: select('genre', $genres) !!} {!! $errors->first('genre', '<small class="help-block">:message</small>') !!}</p>
 			</div>
-			
 			                    
 			<div class="com">
-				<p class="comments">{!! Form::label('comments', 'Commentaires') !!}</p>
+				<p class="">{!! Form::label('comments', 'Commentaires') !!}</p>
 				<p>Notez ici toute information pertinente concernant votre manuscrit.</p>
 				{!! Form::textarea('comments') !!}
 				{!! $errors->first('comments', '<small class="help-block">:message</small>') !!} 

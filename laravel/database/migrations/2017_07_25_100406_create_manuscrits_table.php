@@ -20,8 +20,8 @@ class CreateManuscritsTable extends Migration
             $table->string('name', 255);
             $table->string('email', 255);
             $table->string('title', 255);
-            $table->integer('id_genre')->unsigned();
-            $table->text('resume');
+            $table->integer('id_genre')->unsigned()->nullable();
+            $table->text('resume')->nullable();
             $table->text('comments')->nullable();
             $table->string('file', 255);
             $table->string('descriptionfile', 255);

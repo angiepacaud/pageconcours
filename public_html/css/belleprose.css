@@ -7,7 +7,7 @@
 }
 
 
-h1.coordonnees{
+h1.coordonnees, h3{
 	text-align:center;
 	color:#094782;
 	display:block;
@@ -28,3 +28,4 @@ input{
 textarea{
 	width:95%;
 }
+
