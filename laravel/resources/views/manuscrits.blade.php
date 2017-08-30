@@ -49,6 +49,7 @@
 							amour de la romance sous toutes ses formes et des Belles Brutes
 							Tatouées, les BBTrices sont les lectrices de romance les plus
 							passionnées de la Belle Province.</p>
+				    <strong>Bookivores </strong><br>
 					<p class="text-left" style="">
 						<img src="/img/logo _bookivores.png" align="right" class="img-responsive" style="margin-right: 15px; display: block; width: 80px; height: 80px;" />
 						Passionnée de littérature en tout genre, Miss Dupont et son équipe de Bookivores rassemblent près de 3 000 fans de littérature dans leur communauté et sur leur blog <a href="http://bookivores.over-blog.com" target="_blank">http://bookivores.over-blog.com</a>
