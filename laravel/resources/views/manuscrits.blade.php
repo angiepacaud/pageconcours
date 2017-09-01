@@ -117,7 +117,7 @@
 		</div>
 		
 		<h1 class="coordonnees">INSCRIPTION</h1>
-		<p style="text-align:center;font-weight:bold">Merci de télécharger la fiche descriptive du manuscrit ci bas ; de la remplir et de l’envoyer via le formulaire dédié avec votre manuscrit</p> 
+		<p style="text-align:center;font-weight:bold">Merci de télécharger la fiche descriptive du manuscrit ci bas, de la remplir et de l’envoyer via le formulaire dédié avec votre manuscrit</p> 
 		<div class="col-md-6 col-sm-6">
 		  <a id="error"></a>
 				@if(session()->has('error'))
@@ -144,8 +144,9 @@
         			</div>
         			
         			<div class="file">
-        			    {!! Form::label('descriptionfile', 'Fiche descriptive') !!}
-        			    Pour valider votre inscription merci de joindre la fiche descriptive du manuscrit et votre manuscrit juste ici : <a href="/description_manuscrit.docx">FICHE DESCRIPTIVE A TELECHARGER </a>
+        			    {!! Form::label('descriptionfile', 'Fiche descriptive') !!}<br />
+        			    Pour valider votre inscription, merci de joindre la fiche descriptive du manuscrit et votre manuscrit <br />
+        			    <a href="/description_manuscrit.docx">FICHE DESCRIPTIVE A TELECHARGER </a>
         				{!! Form::file('descriptionfile', array('class' => '')) !!} 
         				{!! $errors->first('descriptionfile', '<small class="help-block">:message</small>') !!}
         			</div>
