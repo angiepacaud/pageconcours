@@ -27,3 +27,8 @@ Route::post('/', ['uses' => 'ManuscritsController@postForm', 'as' => 'storeManus
 Route::get('/edit/{manuscrits}', 'HomeController@edit', function(App\Manuscrits $manuscrits){});
 Route::post('/edit/{manuscrits}', ['uses' => 'HomeController@edit', 'as' => 'storeEdit']);
 
+
+
+Route::group(['prefix' => 'admin'], function () {
+    Voyager::routes();
+});
