@@ -5,30 +5,29 @@
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
-                <div class="panel-heading">Tableau de bord</div>
+                <div class="panel-heading" style="font-weight: bold;">Tableau de bord</div>
 
               <!--  <div class="panel-body">
                     Connecté</br>  -->
 
-                
 
                     <table>
                     
                     <tr>
-                        <th>Prénom</th>
-                        <th>Nom</th>
-                        <th>Email</th>
-                        <th>Titre</th>
+                        <th style="padding: 15px; font-weight: bold; color: black;" >Prénom</th>
+                        <th style="padding: 15px; font-weight: bold; color: black;">Nom</th>
+                        <th style="padding: 20px; font-weight: bold; color: black;">Email</th>
+                        <th style="padding: 15px; font-weight: bold; color: black;" >Titre</th>
                     </tr>
 
                     <?php 
                     foreach ($manuscrits as  $key=>$value) { ?>
                         <tr>
-                            <td><?php echo $value->firstname; ?></td>
-                            <td><?php echo $value->name; ?></td>
-                            <td><?php echo $value->email; ?></td>
-                            <td><?php echo $value->title; ?></td>
-                            <td><a href="{{url('/edit/'.$value->id)}}">voir la fiche</a></td>
+                            <td style="padding-left: 15px;"><?php echo $value->firstname; ?></td>
+                            <td style="padding-right: 20px;"><?php echo $value->name; ?></td>
+                            <td style="padding-right: 20px;"><?php echo $value->email; ?></td>
+                            <td style="padding-right: 20px;"><?php echo $value->title; ?></td>
+                            <td style="padding-left: 30px; font-weight: bold; font-style: italic;"><a href="{{url('/edit/'.$value->id)}}">voir la fiche</a></td>
                             
                             <!--<td><a href="<?php //echo URL::route('edit', array('id'=>$value->id))?>">voir la fiche</a></td>-->
                         </tr>

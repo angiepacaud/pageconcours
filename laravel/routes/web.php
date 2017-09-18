@@ -20,9 +20,9 @@ Route::post('/', ['uses' => 'ManuscritsController@postForm', 'as' => 'storeManus
  	return view('erreur_extension');
  });
  
-//Auth::routes();
+Auth::routes();
 
-//Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/edit/{manuscrits}', 'HomeController@edit', function(App\Manuscrits $manuscrits){});
 Route::post('/edit/{manuscrits}', ['uses' => 'HomeController@edit', 'as' => 'storeEdit']);
@@ -32,3 +32,4 @@ Route::post('/edit/{manuscrits}', ['uses' => 'HomeController@edit', 'as' => 'sto
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });
+

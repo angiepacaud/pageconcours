@@ -19,7 +19,7 @@
 						• <strong style="font-size:18px"><a target="_blank"href="/reglement.pdf">Règlement complet disponible ici </a>.</strong><br />
 					</p>
 				</div>
-
+						
 				<div class="head">
 					<h1 class="coordonnees">Marraines de l’édition & Partenaires :</h1>
 					</span>
