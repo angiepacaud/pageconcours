@@ -10,8 +10,9 @@ class FileGestion implements FileGestionInterface
 		if($file->isValid())
 		
 		{
-		    $chemin = getenv('APP_UPLOAD_DIR');
-			
+		    //$chemin = getenv('APP_UPLOAD_DIR');
+			 $chemin = getenv('manuscrits.path');
+
 			if (filesize($file) > 8388608) return false;
 			if (!in_array($file->getMimeType(), array('application/pdf', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document', 'text/rtf', 'application/msword'))) return false;
 			
