@@ -21,10 +21,10 @@
 
 <script>
 function myFunction() {
-    popup = window.open('', 'popup', 'height=400, width=500');
+    popup = window.open('', 'popup', 'height=400, width=450');
 popup.document.write('<form action="?" method="post">');
 popup.document.write('<label= "notes"></label>');
-popup.document.write('<textarea></textarea>');
+popup.document.write('<textarea style=" height: 300px; width: 400px;"></textarea>');
 popup.document.write('<div><input type="submit" value="Valider" /></div>');
 popup.document.write('</form>');
 }
@@ -54,7 +54,7 @@ popup.document.write('</form>');
 
 
 </tr>
-<tr><td> {!! Form::submit('Envoyer', ['class' => 'btn btn-info pull-right']) !!}</td></tr>
+<tr><td style="position: relative; left: 93%; padding-top: 50px;"> {!! Form::submit('Envoyer', ['class' => 'btn btn-info pull-right']) !!}</td></tr>
 
 
 
