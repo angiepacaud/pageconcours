@@ -23,7 +23,7 @@
 function myFunction() {
     popup = window.open('', 'popup', 'height=400, width=450');
 popup.document.write('<form action="?" method="post">');
-popup.document.write('<label= "notes"></label>');
+// popup.document.write('<label= "notes"></label>');
 popup.document.write('<textarea style=" height: 300px; width: 400px;"></textarea>');
 popup.document.write('<div><input type="submit" value="Valider" /></div>');
 popup.document.write('</form>');
