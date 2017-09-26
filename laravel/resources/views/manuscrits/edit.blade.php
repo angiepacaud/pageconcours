@@ -22,7 +22,8 @@
                         <th style="padding: 15px; font-weight: bold; color: black;">Manuscrit</th>
                         <th style="padding: 15px; font-weight: bold; color: black;">Fiche</th>
                         <th style="padding: 15px; font-weight: bold; color: black;">Statut</th>
-                    </tr>
+                        <th style="padding: 15px; font-weight: bold; color: black;">{!! Form::label('Notes', 'Ajouter une note') !!}</th>
+                        <th style="padding: 15px; font-weight: bold; color: black;">User</th>
 
                     
                     
