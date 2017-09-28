@@ -16,6 +16,7 @@ class DatabaseSeeder extends Seeder {
        $this->call('StatutTableSeeder');
        $this->call('ManuscritsTableSeeder');
        //$this->call('GenreTableSeeder');
+       //$this->call('NotationTableSeeder');
    }
 
 }
