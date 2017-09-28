@@ -27,7 +27,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/edit/{manuscrits}', 'HomeController@edit', function(App\Manuscrits $manuscrits){});
 Route::post('/edit/{manuscrits}', ['uses' => 'HomeController@edit', 'as' => 'storeEdit']);
 
-
+Route::get('/download/{manuscrits}', 'HomeController@download');
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
